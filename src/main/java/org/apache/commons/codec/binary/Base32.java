@@ -60,6 +60,7 @@ public class Base32 extends BaseNCodec {
      * Builds {@link Base32} instances.
      *
      * @since 1.17.0
+     *
      */
     public static class Builder extends AbstractBuilder<Base32, Builder> {
 
