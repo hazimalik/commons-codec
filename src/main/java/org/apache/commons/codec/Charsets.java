@@ -160,10 +160,6 @@ public class Charsets {
         return charset == null ? Charset.defaultCharset() : Charset.forName(charset);
     }
 
-    /**
-     *
-     */
-    @Deprecated
     public Charsets() {
         // empty
     }
