@@ -165,9 +165,7 @@ public class URLCodec implements BinaryEncoder, BinaryDecoder, StringEncoder, St
     /**
      * The default charset used for string decoding and encoding.
      *
-     * @deprecated TODO: This field will be changed to a private final Charset in 2.0. (CODEC-126)
      */
-    @Deprecated
     protected volatile String charset; // added volatile: see CODEC-232
 
     /**

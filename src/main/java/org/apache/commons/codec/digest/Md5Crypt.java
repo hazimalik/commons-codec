@@ -405,11 +405,8 @@ public class Md5Crypt {
     }
 
     /**
-     * TODO Make private in 2.0.
      *
-     * @deprecated TODO Make private in 2.0.
      */
-    @Deprecated
     public Md5Crypt() {
         // empty
     }

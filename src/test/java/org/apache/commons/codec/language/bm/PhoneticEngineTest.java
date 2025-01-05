@@ -61,7 +61,6 @@ public class PhoneticEngineTest {
         // @formatter:on
     }
 
-    // TODO Identify if there is a need to an assertTimeout(Duration.ofMillis(10000L) in some point, since this method was marked as @Test(timeout = 10000L)
     @ParameterizedTest
     @MethodSource("data")
     public void testEncode(final String name, final String phoneticExpected, final NameType nameType,

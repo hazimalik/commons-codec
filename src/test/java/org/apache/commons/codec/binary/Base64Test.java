@@ -302,7 +302,6 @@ public class Base64Test {
         final byte[] in = { 0 };
         final byte[] out = Base64.encodeBase64(in);
         Base64.encodeBase64(in, false, false, out.length);
-        // TODO Assert??
     }
 
     /**
@@ -408,7 +407,6 @@ public class Base64Test {
 
     @Test
     public void testCodeIntegerEdgeCases() {
-        // TODO
     }
 
     @Test
@@ -453,7 +451,6 @@ public class Base64Test {
 
         assertThrows(IllegalArgumentException.class, () -> new Base64(-1, new byte[] { 'A' }),
                 "Should have rejected attempt to use 'A' as a line separator");
-        // TODO do we need to check sep if len = -1?
 
         assertThrows(IllegalArgumentException.class, () -> new Base64(64, new byte[] { 'A' }),
                 "Should have rejected attempt to use 'A' as a line separator");

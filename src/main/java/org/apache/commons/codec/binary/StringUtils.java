@@ -413,11 +413,8 @@ public class StringUtils {
     }
 
     /**
-     * TODO Make private in 2.0.
      *
-     * @deprecated TODO Make private in 2.0.
      */
-    @Deprecated
     public StringUtils() {
         // empty
     }

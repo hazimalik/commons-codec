@@ -49,7 +49,7 @@ public class PercentCodecTest {
     }
 
     @Test
-    @Disabled // TODO Should be removed?
+    @Disabled
     public void testBasicSpace() throws Exception {
         final PercentCodec percentCodec = new PercentCodec();
         final String input = " ";

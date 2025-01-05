@@ -413,12 +413,6 @@ public class UnixCrypt {
         results[1] = b;
     }
 
-    /**
-     * TODO Make private in 2.0.
-     *
-     * @deprecated TODO Make private in 2.0.
-     */
-    @Deprecated
     public UnixCrypt() {
         // empty
     }
