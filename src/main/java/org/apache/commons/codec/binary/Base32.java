@@ -73,7 +73,7 @@ public class Base32 extends BaseNCodec {
 
         @Override
         public Base32 get() {
-            return new Base32(getLineLength(), getLineSeparator(), getEncodeTable(), getPadding(), getDecodingPolicy());
+            return new Base32(getLineLength(), super.getLineSeparator(), getEncodeTable(), getPadding(), getDecodingPolicy());
         }
 
     }
