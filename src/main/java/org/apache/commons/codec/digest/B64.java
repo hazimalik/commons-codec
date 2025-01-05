@@ -22,7 +22,6 @@ import java.util.Random;
 /**
  * Base64-like method to convert binary bytes into ASCII chars.
  * <p>
- * TODO: Can Base64 be reused?
  * </p>
  * <p>
  * This class is immutable and thread-safe.
