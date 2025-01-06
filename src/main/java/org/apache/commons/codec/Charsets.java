@@ -81,7 +81,6 @@ public class Charsets {
      *
      * @see <a href="https://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html">Standard charsets</a>
      */
-    @Deprecated
     public static final Charset US_ASCII = StandardCharsets.US_ASCII;
 
     /**
