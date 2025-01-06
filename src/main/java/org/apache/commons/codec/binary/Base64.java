@@ -85,7 +85,7 @@ public class Base64 extends BaseNCodec {
 
         @Override
         public Base64 get() {
-            return new Base64(getLineLength(), getLineSeparator(), getPadding(), getEncodeTable(), getDecodingPolicy());
+            return new Base64(getLineLength(), super.getLineSeparator(), getPadding(), getEncodeTable(), getDecodingPolicy());
         }
 
         /**
