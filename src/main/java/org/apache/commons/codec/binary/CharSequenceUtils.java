@@ -81,7 +81,7 @@ public class CharSequenceUtils {
      * Consider private.
      *
      */
-    public CharSequenceUtils() {
+    protected CharSequenceUtils() {
         // empty
     }
 }
