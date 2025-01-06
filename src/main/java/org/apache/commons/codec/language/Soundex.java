@@ -114,7 +114,6 @@ public class Soundex implements StringEncoder {
      * The maximum length of a Soundex code - Soundex codes are only four characters by definition.
      *
      */
-    @Deprecated
     private int maxLength = 4;
 
     /**
@@ -255,7 +254,6 @@ public class Soundex implements StringEncoder {
      *
      * @return int
      */
-    @Deprecated
     public int getMaxLength() {
         return this.maxLength;
     }
@@ -292,7 +290,6 @@ public class Soundex implements StringEncoder {
      * @param maxLength
      *                  The maxLength to set
      */
-    @Deprecated
     public void setMaxLength(final int maxLength) {
         this.maxLength = maxLength;
     }

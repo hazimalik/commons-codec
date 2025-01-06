@@ -1360,7 +1360,6 @@ public class DigestUtils {
      * Preserves binary compatibility only. As for previous versions does not provide useful behavior
      *
      */
-    @Deprecated
     public DigestUtils() {
         this.messageDigest = null;
     }

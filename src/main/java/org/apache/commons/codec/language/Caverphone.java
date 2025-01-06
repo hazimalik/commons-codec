@@ -30,7 +30,6 @@ import org.apache.commons.codec.StringEncoder;
  * @see <a href="https://caversham.otago.ac.nz/files/working/ctp150804.pdf">Caverphone 2.0 specification</a>
  * @since 1.4
  */
-@Deprecated
 public class Caverphone implements StringEncoder {
 
     /**
