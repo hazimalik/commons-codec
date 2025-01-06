@@ -387,7 +387,7 @@ public abstract class BaseNCodec implements BinaryEncoder, BinaryDecoder {
     /**
      */
     @Deprecated
-    protected static final byte PAD = PAD_DEFAULT; // instance variable just in case it needs to vary later
+    protected final byte PAD = PAD_DEFAULT; // instance variable just in case it needs to vary later
 
     /** Pad byte. Instance variable just in case it needs to vary later. */
     protected final byte pad;
