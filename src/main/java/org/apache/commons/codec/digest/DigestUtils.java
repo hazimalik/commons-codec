@@ -336,7 +336,6 @@ public class DigestUtils {
      * @return An SHA-1 digest instance.
      * @throws IllegalArgumentException when a {@link NoSuchAlgorithmException} is caught
      */
-    @Deprecated
     public static MessageDigest getShaDigest() {
         return getSha1Digest();
     }
@@ -490,7 +489,6 @@ public class DigestUtils {
      * @param data Data to digest
      * @return SHA-1 digest
      */
-    @Deprecated
     public static byte[] sha(final byte[] data) {
         return sha1(data);
     }
@@ -503,7 +501,6 @@ public class DigestUtils {
      * @throws IOException On error reading from the stream
      * @since 1.4
      */
-    @Deprecated
     public static byte[] sha(final InputStream data) throws IOException {
         return sha1(data);
     }
@@ -514,7 +511,6 @@ public class DigestUtils {
      * @param data Data to digest
      * @return SHA-1 digest
      */
-    @Deprecated
     public static byte[] sha(final String data) {
         return sha1(data);
     }
@@ -1204,7 +1200,6 @@ public class DigestUtils {
      * @param data Data to digest
      * @return SHA-1 digest as a hexadecimal string
      */
-    @Deprecated
     public static String shaHex(final byte[] data) {
         return sha1Hex(data);
     }
@@ -1217,7 +1212,6 @@ public class DigestUtils {
      * @throws IOException On error reading from the stream
      * @since 1.4
      */
-    @Deprecated
     public static String shaHex(final InputStream data) throws IOException {
         return sha1Hex(data);
     }
@@ -1228,7 +1222,6 @@ public class DigestUtils {
      * @param data Data to digest
      * @return SHA-1 digest as a hexadecimal string
      */
-    @Deprecated
     public static String shaHex(final String data) {
         return sha1Hex(data);
     }

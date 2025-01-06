@@ -73,7 +73,6 @@ public final class HmacUtils {
      * @throws IllegalArgumentException
      *             when a {@link NoSuchAlgorithmException} is caught or key is null or key is invalid.
      */
-    @Deprecated
     public static Mac getHmacMd5(final byte[] key) {
         return getInitializedMac(HmacAlgorithms.HMAC_MD5, key);
     }
@@ -698,7 +697,6 @@ public final class HmacUtils {
      * @throws IllegalArgumentException
      *             when a {@link NoSuchAlgorithmException} is caught or key is null or key is invalid.
      */
-    @Deprecated
     public static String hmacSha512Hex(final byte[] key, final byte[] valueToDigest) {
         return new HmacUtils(HmacAlgorithms.HMAC_SHA_512, key).hmacHex(valueToDigest);
     }

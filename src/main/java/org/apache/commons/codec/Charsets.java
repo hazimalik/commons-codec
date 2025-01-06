@@ -92,7 +92,6 @@ public class Charsets {
      *
      * @see <a href="https://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html">Standard charsets</a>
      */
-    @Deprecated
     public static final Charset UTF_16 = StandardCharsets.UTF_16;
 
     /**
@@ -103,7 +102,6 @@ public class Charsets {
      *
      * @see <a href="https://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html">Standard charsets</a>
      */
-    @Deprecated
     public static final Charset UTF_16BE = StandardCharsets.UTF_16BE;
 
     /**
@@ -114,7 +112,6 @@ public class Charsets {
      *
      * @see <a href="https://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html">Standard charsets</a>
      */
-    @Deprecated
     public static final Charset UTF_16LE = StandardCharsets.UTF_16LE;
 
     /**
@@ -125,7 +122,6 @@ public class Charsets {
      *
      * @see <a href="https://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html">Standard charsets</a>
      */
-    @Deprecated
     public static final Charset UTF_8 = StandardCharsets.UTF_8;
 
     /**

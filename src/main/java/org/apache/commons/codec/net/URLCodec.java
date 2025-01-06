@@ -58,7 +58,6 @@ public class URLCodec implements BinaryEncoder, BinaryDecoder, StringEncoder, St
      * This is a copy of the internal BitSet which is now used for the conversion.
      * Changes to this field are ignored.
      */
-    @Deprecated
     protected static final BitSet WWW_FORM_URL;
 
     private static final BitSet WWW_FORM_URL_SAFE = new BitSet(256);

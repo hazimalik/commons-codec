@@ -387,7 +387,6 @@ public class Base64 extends BaseNCodec {
      * @return {@code true} if all bytes are valid characters in the Base64 alphabet or if the byte array is empty;
      *         {@code false}, otherwise
      */
-    @Deprecated
     public static boolean isArrayByteBase64(final byte[] arrayOctet) {
         return isBase64(arrayOctet);
     }
