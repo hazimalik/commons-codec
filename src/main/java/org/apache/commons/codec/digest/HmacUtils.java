@@ -692,7 +692,6 @@ public final class HmacUtils {
      *             If an I/O error occurs.
      * @throws IllegalArgumentException
      *             when a {@link NoSuchAlgorithmException} is caught or key is null or key is invalid.
-     * @deprecated (1.11) Use {@code new HmacUtils(HmacAlgorithms.HMAC_SHA_512, byte[]).hmacHex(InputStream)}
      */
 
     public static String hmacSha512Hex(final byte[] key, final InputStream valueToDigest) throws IOException {
@@ -709,7 +708,6 @@ public final class HmacUtils {
      * @return HmacSHA512 MAC for the given key and value as hexadecimal string (lowercase)
      * @throws IllegalArgumentException
      *             when a {@link NoSuchAlgorithmException} is caught or key is null or key is invalid.
-     * @deprecated (1.11) Use {@code new HmacUtils(HmacAlgorithms.HMAC_SHA_512, String).hmacHex(String)}
      */
     public static String hmacSha512Hex(final String key, final String valueToDigest) {
         return new HmacUtils(HmacAlgorithms.HMAC_SHA_512, key).hmacHex(valueToDigest);
@@ -815,7 +813,6 @@ public final class HmacUtils {
     /**
      * Preserves binary compatibility only.
      * As for previous versions does not provide useful behavior
-     * @deprecated since 1.11; only useful to preserve binary compatibility
      */
     public HmacUtils() {
         this(null);

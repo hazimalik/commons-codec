@@ -1090,7 +1090,6 @@ public final class MurmurHash3 {
      * @param data The int to hash
      * @return The 64-bit hash
      * @see #hash64(byte[], int, int, int)
-     * @deprecated Not part of the MurmurHash3 implementation.
      * Use half of the hash bytes from {@link #hash128x64(byte[])} with the bytes from the {@code int}.
      */
     public static long hash64(final int data) {
@@ -1131,7 +1130,6 @@ public final class MurmurHash3 {
      * @param data The long to hash
      * @return The 64-bit hash
      * @see #hash64(byte[], int, int, int)
-     * @deprecated Not part of the MurmurHash3 implementation.
      * Use half of the hash bytes from {@link #hash128x64(byte[])} with the bytes from the {@code long}.
      */
     public static long hash64(final long data) {
@@ -1174,7 +1172,6 @@ public final class MurmurHash3 {
      * @param data The short to hash
      * @return The 64-bit hash
      * @see #hash64(byte[], int, int, int)
-     * @deprecated Not part of the MurmurHash3 implementation.
      * Use half of the hash bytes from {@link #hash128x64(byte[])} with the bytes from the {@code short}.
      */
     public static long hash64(final short data) {

@@ -387,7 +387,6 @@ public abstract class BaseNCodec implements BinaryEncoder, BinaryDecoder {
      * The padding byte used for encoding. This instance variable is marked as deprecated
      * because it is not recommended for direct use. Use {@link #PAD_DEFAULT} instead.
      *
-     * @deprecated Use {@link #PAD_DEFAULT} instead for consistency.
      */
     protected final byte PAD = PAD_DEFAULT; // instance variable just in case it needs to vary later
 
