@@ -335,7 +335,6 @@ public class DigestUtils {
      *
      * @return An SHA-1 digest instance.
      * @throws IllegalArgumentException when a {@link NoSuchAlgorithmException} is caught
-     * @deprecated (1.11) Use {@link #getSha1Digest()}
      */
     @Deprecated
     public static MessageDigest getShaDigest() {
@@ -490,7 +489,6 @@ public class DigestUtils {
      *
      * @param data Data to digest
      * @return SHA-1 digest
-     * @deprecated (1.11) Use {@link #sha1(byte[])}
      */
     @Deprecated
     public static byte[] sha(final byte[] data) {
@@ -504,7 +502,6 @@ public class DigestUtils {
      * @return SHA-1 digest
      * @throws IOException On error reading from the stream
      * @since 1.4
-     * @deprecated (1.11) Use {@link #sha1(InputStream)}
      */
     @Deprecated
     public static byte[] sha(final InputStream data) throws IOException {
@@ -516,7 +513,6 @@ public class DigestUtils {
      *
      * @param data Data to digest
      * @return SHA-1 digest
-     * @deprecated (1.11) Use {@link #sha1(String)}
      */
     @Deprecated
     public static byte[] sha(final String data) {
@@ -1207,7 +1203,6 @@ public class DigestUtils {
      *
      * @param data Data to digest
      * @return SHA-1 digest as a hexadecimal string
-     * @deprecated (1.11) Use {@link #sha1Hex(byte[])}
      */
     @Deprecated
     public static String shaHex(final byte[] data) {
@@ -1221,7 +1216,6 @@ public class DigestUtils {
      * @return SHA-1 digest as a hexadecimal string
      * @throws IOException On error reading from the stream
      * @since 1.4
-     * @deprecated (1.11) Use {@link #sha1Hex(InputStream)}
      */
     @Deprecated
     public static String shaHex(final InputStream data) throws IOException {
@@ -1233,7 +1227,6 @@ public class DigestUtils {
      *
      * @param data Data to digest
      * @return SHA-1 digest as a hexadecimal string
-     * @deprecated (1.11) Use {@link #sha1Hex(String)}
      */
     @Deprecated
     public static String shaHex(final String data) {
@@ -1373,7 +1366,6 @@ public class DigestUtils {
     /**
      * Preserves binary compatibility only. As for previous versions does not provide useful behavior
      *
-     * @deprecated since 1.11; only useful to preserve binary compatibility
      */
     @Deprecated
     public DigestUtils() {

@@ -80,9 +80,7 @@ public class CharSequenceUtils {
     /**
      * Consider private.
      *
-     * @deprecated Will be private in the next major version.
      */
-    @Deprecated
     public CharSequenceUtils() {
         // empty
     }

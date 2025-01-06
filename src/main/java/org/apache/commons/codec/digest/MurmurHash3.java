@@ -68,7 +68,6 @@ public final class MurmurHash3 {
      * any bytes left over from dividing the length by 4. This manifests if any of these
      * bytes are negative.</p>
      *
-     * @deprecated Use IncrementalHash32x86. This corrects the processing of trailing bytes.
      */
     @Deprecated
     public static class IncrementalHash32 extends IncrementalHash32x86 {
@@ -87,7 +86,6 @@ public final class MurmurHash3 {
          * any bytes left over from dividing the length by 4. This manifests if any of these
          * bytes are negative.<p>
          *
-         * @deprecated Use IncrementalHash32x86. This corrects the processing of trailing bytes.
          */
         @Override
         @Deprecated
@@ -306,7 +304,6 @@ public final class MurmurHash3 {
     /**
      * A random number to use for a hash code.
      *
-     * @deprecated This is not used internally and will be removed in a future release.
      */
     @Deprecated
     public static final long NULL_HASHCODE = 2862933555777941757L;
@@ -432,7 +429,6 @@ public final class MurmurHash3 {
      * @param length The length of array
      * @param seed The initial seed value
      * @return The 128-bit hash (2 longs)
-     * @deprecated Use {@link #hash128x64(byte[], int, int, int)}. This corrects the seed initialization.
      */
     @Deprecated
     public static long[] hash128(final byte[] data, final int offset, final int length, final int seed) {
@@ -468,7 +464,6 @@ public final class MurmurHash3 {
      * @param data The input String
      * @return The 128-bit hash (2 longs)
      * @see #hash128(byte[], int, int, int)
-     * @deprecated Use {@link #hash128x64(byte[])} using the bytes returned from
      * {@link String#getBytes(java.nio.charset.Charset)}.
      */
     @Deprecated
@@ -635,7 +630,6 @@ public final class MurmurHash3 {
      * @param data The input byte array
      * @return The 32-bit hash
      * @see #hash32(byte[], int, int, int)
-     * @deprecated Use {@link #hash32x86(byte[], int, int, int)}. This corrects the processing of trailing bytes.
      */
     @Deprecated
     public static int hash32(final byte[] data) {
@@ -660,7 +654,6 @@ public final class MurmurHash3 {
      * @param length The length of array
      * @return The 32-bit hash
      * @see #hash32(byte[], int, int, int)
-     * @deprecated Use {@link #hash32x86(byte[], int, int, int)}. This corrects the processing of trailing bytes.
      */
     @Deprecated
     public static int hash32(final byte[] data, final int length) {
@@ -685,7 +678,6 @@ public final class MurmurHash3 {
      * @param seed The initial seed value
      * @return The 32-bit hash
      * @see #hash32(byte[], int, int, int)
-     * @deprecated Use {@link #hash32x86(byte[], int, int, int)}. This corrects the processing of trailing bytes.
      */
     @Deprecated
     public static int hash32(final byte[] data, final int length, final int seed) {
@@ -707,7 +699,6 @@ public final class MurmurHash3 {
      * @param length The length of array
      * @param seed The initial seed value
      * @return The 32-bit hash
-     * @deprecated Use {@link #hash32x86(byte[], int, int, int)}. This corrects the processing of trailing bytes.
      */
     @Deprecated
     public static int hash32(final byte[] data, final int offset, final int length, final int seed) {
@@ -869,7 +860,6 @@ public final class MurmurHash3 {
      * @param data The input string
      * @return The 32-bit hash
      * @see #hash32(byte[], int, int, int)
-     * @deprecated Use {@link #hash32x86(byte[], int, int, int)} with the bytes returned from
      * {@link String#getBytes(java.nio.charset.Charset)}. This corrects the processing of trailing bytes.
      */
     @Deprecated
@@ -967,7 +957,6 @@ public final class MurmurHash3 {
      * @param data The input byte array
      * @return The 64-bit hash
      * @see #hash64(byte[], int, int, int)
-     * @deprecated Not part of the MurmurHash3 implementation.
      * Use half of the hash bytes from {@link #hash128x64(byte[])}.
      */
     @Deprecated
@@ -1000,7 +989,6 @@ public final class MurmurHash3 {
      * @param length The length of array
      * @return The 64-bit hash
      * @see #hash64(byte[], int, int, int)
-     * @deprecated Not part of the MurmurHash3 implementation.
      * Use half of the hash bytes from {@link #hash128x64(byte[], int, int, int)}.
      */
     @Deprecated
@@ -1033,7 +1021,6 @@ public final class MurmurHash3 {
      * @param length The length of array
      * @param seed The initial seed value
      * @return The 64-bit hash
-     * @deprecated Not part of the MurmurHash3 implementation.
      * Use half of the hash bytes from {@link #hash128x64(byte[], int, int, int)}.
      */
     @Deprecated

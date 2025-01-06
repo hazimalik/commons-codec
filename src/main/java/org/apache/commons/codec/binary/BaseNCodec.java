@@ -346,7 +346,6 @@ public abstract class BaseNCodec implements BinaryEncoder, BinaryDecoder {
      *            the byte to check
      * @return true if byte is whitespace, false otherwise
      * @see Character#isWhitespace(int)
-     * @deprecated Use {@link Character#isWhitespace(int)}.
      */
     @Deprecated
     protected static boolean isWhiteSpace(final byte byteToCheck) {
@@ -386,7 +385,6 @@ public abstract class BaseNCodec implements BinaryEncoder, BinaryDecoder {
     }
 
     /**
-     * @deprecated Use {@link #pad}. Will be removed in 2.0.
      */
     @Deprecated
     protected final byte PAD = PAD_DEFAULT; // instance variable just in case it needs to vary later

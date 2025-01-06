@@ -617,7 +617,6 @@ public class Sha2Crypt {
     /**
      * Consider private.
      *
-     * @deprecated Will be private in the next major version.
      */
     @Deprecated
     public Sha2Crypt() {

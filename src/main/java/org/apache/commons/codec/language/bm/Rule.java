@@ -185,13 +185,10 @@ public class Rule {
         }
 
         /**
-         * Deprecated since 1.9.
          *
          * @param right the Phoneme to join
          * @return a new Phoneme
-         * @deprecated since 1.9
          */
-        @Deprecated
         public Phoneme join(final Phoneme right) {
             return new Phoneme(this.phonemeText.toString() + right.phonemeText.toString(),
                                this.languages.restrictTo(right.languages));
