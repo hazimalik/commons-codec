@@ -84,7 +84,7 @@ public class Digest {
         // where '*' is used for binary files
         // shasum(1) has a -b option which generates " *" separator
         // we don't distinguish binary files at present
-        System.out.println(prefix + Hex.encodeHexString(digest) + (fileName != null ? "  " + fileName : ""));
+        logger.info("{}{}{}", prefix, Hex.encodeHexString(digest), fileName != null ? "  " + fileName : "");
     }
 
     private void run() throws IOException {
