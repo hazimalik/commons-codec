@@ -55,6 +55,24 @@ limitations under the License.
       <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-codec/</url>
     </site>
   </distributionManagement>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+    <repository>
+      <id>openjdk-repo</id>
+      <url>https://repository.openjdk.java.net/maven</url>
+    </repository>
+    <repository>
+      <id>sonatype-oss-repo</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </repository>
+    <repository>
+      <id>openjdk</id>
+      <url>https://maven.openjdk.java.net/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>org.apache.commons</groupId>
@@ -70,6 +88,12 @@ limitations under the License.
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.9.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <scope>test</scope>
     </dependency>
@@ -77,6 +101,23 @@ limitations under the License.
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-junit5-plugin</artifactId>
+        <version>1.2.1</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-core</artifactId>
+      <version>1.37</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-generator-annprocess</artifactId>
+      <version>1.37</version>
     </dependency>
   </dependencies>
   <properties>
@@ -136,7 +177,7 @@ limitations under the License.
             <includeTestSourceDirectory>true</includeTestSourceDirectory>
             <resourceExcludes>NOTICE.txt,LICENSE.txt,**/pom.properties,**/sha512.properties</resourceExcludes>
           </configuration>
-        </plugin>        
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -229,6 +270,41 @@ limitations under the License.
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-maven</artifactId>
+        <version>1.17.3</version>
+        <configuration>
+          <targetClasses>
+            <param>org.apache.commons.codec.*</param> <!-- Replace with your package -->
+          </targetClasses>
+          <targetTests>
+            <param>org.apache.commons.codec.*Test</param> <!-- Replace with your test package -->
+          </targetTests>
+          <mutators>
+            <mutator>DEFAULTS</mutator>
+          </mutators>
+          <excludedMethods>
+            <exludedmathod>main</exludedmathod>
+          </excludedMethods>
+          <threads>1</threads>
+          <timeoutConstant>20000</timeoutConstant><!-- Timeout in milliseconds -->
+          <timeoutFactor>1.5</timeoutFactor>
+          <verbose>true</verbose>
+          <outputFormats>
+            <param>HTML</param>
+          </outputFormats>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version> <!-- Ensure this version matches your needs -->
+        <configuration>
+          <source>17</source> <!-- Set to your Java version -->
+          <target>17</target> <!-- Set to your Java version -->
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <reporting>
@@ -285,9 +361,12 @@ limitations under the License.
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>javancss-maven-plugin</artifactId>
-        <version>2.1</version>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <release>17</release>
+        </configuration>
       </plugin>
     </plugins>
   </reporting>
@@ -306,8 +385,39 @@ limitations under the License.
         <commons.jacoco.methodRatio>0.88</commons.jacoco.methodRatio>
         <commons.jacoco.branchRatio>0.92</commons.jacoco.branchRatio>
         <commons.jacoco.complexityRatio>0.88</commons.jacoco.complexityRatio>
-        <commons.jacoco.lineRatio>0.94</commons.jacoco.lineRatio>    
+        <commons.jacoco.lineRatio>0.94</commons.jacoco.lineRatio>
       </properties>
+    </profile>
+    <profile>
+      <id>benchmark</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.1.1</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>compile</goal>
+                  <goal>benchmark</goal>
+                </goals>
+                <configuration>
+                  <executable>java</executable>
+                  <arguments>
+                    <argument>-cp</argument>
+                    <argument>${project.build.outputDirectory}</argument>
+                    <argument>org.openjdk.jmh.Main</argument>
+                    <argument>org.apache.commons.codec.jmh.CodecBenchmark</argument>
+                    <argument>target/classes:target/dependency/*</argument>
+                    <argument>org.openjdk.jmh.Main</argument>
+                  </arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
     <profile>
 	  <!-- Java 9 and up -->
@@ -323,7 +433,7 @@ limitations under the License.
         <commons.jacoco.methodRatio>0.93</commons.jacoco.methodRatio>
         <commons.jacoco.branchRatio>0.92</commons.jacoco.branchRatio>
         <commons.jacoco.complexityRatio>0.90</commons.jacoco.complexityRatio>
-        <commons.jacoco.lineRatio>0.95</commons.jacoco.lineRatio>    
+        <commons.jacoco.lineRatio>0.95</commons.jacoco.lineRatio>
       </properties>
     </profile>
   </profiles>
@@ -365,7 +475,7 @@ limitations under the License.
       <email>ggregory at apache.org</email>
       <url>https://www.garygregory.com</url>
       <organization>The Apache Software Foundation</organization>
-      <organizationUrl>https://www.apache.org/</organizationUrl>      
+      <organizationUrl>https://www.apache.org/</organizationUrl>
       <roles>
         <role>PMC Member</role>
       </roles>
