@@ -141,7 +141,7 @@ limitations under the License.
     <commons.release.isDistModule>true</commons.release.isDistModule>
     <commons.distSvnStagingUrl>scm:svn:https://dist.apache.org/repos/dist/dev/commons/${commons.componentid}</commons.distSvnStagingUrl>
     <project.build.outputTimestamp>2024-07-15T22:27:42Z</project.build.outputTimestamp>
-    <commons.jacoco.version>0.8.12</commons.jacoco.version>
+    <commons.jacoco.version>0.8.10</commons.jacoco.version>
     <!-- Temp for SUREFIRE-2253 -->
     <commons.surefire.version>3.2.5</commons.surefire.version>
     <!-- JaCoCo: Don't make code coverage worse than: -->
@@ -251,7 +251,7 @@ limitations under the License.
           </ignores>
         </configuration>
       </plugin>
-      <plugin>
+      <!-- <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>0.8.10</version>
@@ -269,7 +269,7 @@ limitations under the License.
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin> -->
       <plugin>
         <groupId>org.pitest</groupId>
         <artifactId>pitest-maven</artifactId>
