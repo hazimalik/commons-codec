@@ -118,9 +118,4 @@ public class CharEncoding {
      * @see Charset
      */
     public static final String UTF_8 = StandardCharsets.UTF_8.name();
-
-    public CharEncoding() {
-        // empty
-    }
-
 }
