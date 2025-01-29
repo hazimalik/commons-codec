@@ -172,7 +172,4 @@ public class Crypt {
     public static String crypt(final String key, final String salt) {
         return crypt(key.getBytes(StandardCharsets.UTF_8), salt);
     }
-    public Crypt() {
-        // empty
-    }
 }
