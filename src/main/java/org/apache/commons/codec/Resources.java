@@ -42,7 +42,4 @@ public class Resources {
         }
         return inputStream;
     }
-    public Resources() {
-        // empty
-    }
 }
