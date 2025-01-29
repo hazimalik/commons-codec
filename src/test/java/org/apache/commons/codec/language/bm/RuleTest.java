@@ -49,8 +49,7 @@ public class RuleTest {
             for (int i = 0; i < phs.length; i++) {
                 for (int j = i + 1; j < phs.length; j++) {
                     final int c = Rule.Phoneme.COMPARATOR.compare(phs[i], phs[j]);
-                    assertTrue(c < 0, 
-                    "Comparing " + phs[i].getPhonemeText() + " to " + phs[j].getPhonemeText() + " should be negative");
+                    assertTrue(c < 0, "Comparing " + phs[i].getPhonemeText() + " to " + phs[j].getPhonemeText() + " should be negative");
                 }
             }
         }
