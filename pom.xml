@@ -362,24 +362,6 @@ limitations under the License.
     </plugins>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.moditect</groupId>
-        <artifactId>moditect-maven-plugin</artifactId>
-        <version>1.2.2.Final</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>add-module-info</goal>
-            </goals>
-            <configuration>
-              <skip>false</skip> <!-- Keep Moditect processing enabled -->
-              <excludedDependencies>
-                <excludedDependency>org.codehaus.plexus:plexus-container-default</excludedDependency> <!-- Exclude Plexus -->
-              </excludedDependencies>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
   <reporting>
