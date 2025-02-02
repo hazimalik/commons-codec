@@ -412,8 +412,4 @@ public class UnixCrypt {
         results[0] = a;
         results[1] = b;
     }
-
-    public UnixCrypt() {
-        // empty
-    }
 }
