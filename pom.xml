@@ -305,6 +305,27 @@ limitations under the License.
           <target>17</target> <!-- Set to your Java version -->
         </configuration>
       </plugin>
+<<<<<<< HEAD
+=======
+         <plugin>
+          <groupId>com.h3xstream.findsecbugs</groupId>
+          <artifactId>findsecbugs-plugin</artifactId>
+           <version>1.12.0</version> <!-- You can change to the latest version -->
+    </plugin>
+      <plugin>
+      <groupId>com.github.spotbugs</groupId>
+      <artifactId>spotbugs-maven-plugin</artifactId>
+      <configuration>
+        <effort>Max</effort> <!-- Deep analysis -->
+        <threshold>Medium</threshold> <!-- Include Medium or higher severity issues -->
+        <failOnError>true</failOnError> <!-- Fail the build if issues are found -->
+        <includeFilterFile>${basedir}/src/conf/spotbugs-include-filter.xml</includeFilterFile>
+        <excludeFilterFile>${basedir}/src/conf/spotbugs-exclude-filter.xml</excludeFilterFile>
+        <plugins>
+    </plugins>
+        </configuration>
+      </plugin>
+>>>>>>> upstream/master
     </plugins>
   </build>
   <reporting>
