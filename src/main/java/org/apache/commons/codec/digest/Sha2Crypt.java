@@ -613,9 +613,4 @@ public class Sha2Crypt {
         }
         return sha2Crypt(keyBytes, salt, SHA512_PREFIX, SHA512_BLOCKSIZE, MessageDigestAlgorithms.SHA_512);
     }
-
-    /**
-     * Consider private.
-     *
-     */
 }
