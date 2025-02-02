@@ -15,22 +15,29 @@
  * limitations under the License.
  */
 
-package org.apache.commons.codec.language.bm;
+ package org.apache.commons.codec.language.bm;
 
-import org.apache.commons.codec.CharEncoding;
-
-/**
- * Constants used to process resource files.
- *
- * <p>This class is immutable and thread-safe.</p>
- *
- * @since 1.6
- */
-final class ResourceConstants {
-
-    static final String CMT = "//";
-    static final String ENCODING = CharEncoding.UTF_8;
-    static final String EXT_CMT_END = "*/";
-    static final String EXT_CMT_START = "/*";
-
-}
+ import org.apache.commons.codec.CharEncoding;
+ 
+ /**
+  * Constants used to process resource files.
+  *
+  * <p>This class is immutable and thread-safe.</p>
+  *
+  * @since 1.6
+  */
+ final class ResourceConstants {
+ 
+     static final String CMT = "//";
+     static final String ENCODING = CharEncoding.UTF_8;
+     static final String EXT_CMT_END = "*/";
+     static final String EXT_CMT_START = "/*";
+ 
+     /**
+      * Private constructor to prevent instantiation.
+      */
+     private ResourceConstants() {
+         // Prevent instantiation
+     }
+ }
+ 
