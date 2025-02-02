@@ -18,7 +18,6 @@
 package org.apache.commons.codec.net;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * Tests Utils.
@@ -34,8 +33,7 @@ public class UtilsTest {
      */
     @Test
     public void testConstructor() {
-        Utils utilsInstance = new Utils();
-        assertNotNull(utilsInstance, "The Utils instance should not be null");
+        new Utils();
     }
 
 }
