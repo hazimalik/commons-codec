@@ -618,7 +618,4 @@ public class Sha2Crypt {
      * Consider private.
      *
      */
-    public Sha2Crypt() {
-        // empty
-    }
 }
